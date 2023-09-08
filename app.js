@@ -1,3 +1,11 @@
-const displayUtc = new Date().toUTCString();
+function display_c() {
+	var refresh = 1000; // Refresh rate in milli seconds
+	mytime = setTimeout("display_ct()", refresh);
+}
 
-document.getElementById("UTCtime").innerHTML = displayUtc;
+function display_ct() {
+	var x = new Date();
+	var x1 = x.toISOString();
+	document.getElementById("ct").innerHTML = x1;
+}
+display_c();

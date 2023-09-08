@@ -5,12 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Slack Profile</title>
 		<link rel="stylesheet" href="styles.css" />
-		<script>
-			var date = new Date();
-			var current_time =
-				date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-			document.getElementById("UTCtime").textContent = current_time;
-		</script>
+		<script src="app.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -26,10 +21,10 @@
 			</div>
 			<div>
 				<div>
-					<h2 data-testid="currentDayOfTheWeek">Saturday</h2>
+					<h2 data-testid="currentDayOfTheWeek" id="time">Saturday</h2>
 				</div>
-				<div data-testid="currentUTCTime">
-					<span id="UTCtime"></span>
+				<div data-testid="currentUTCTime" id="ct">
+					<p></p>
 				</div>
 			</div>
 			<div>
