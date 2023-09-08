@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Slack Profile</title>
 		<link rel="stylesheet" href="styles.css" />
+		<script type="javascript" src="app.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -22,13 +23,19 @@
 				<div>
 					<h2 data-testid="currentDayOfTheWeek">Saturday</h2>
 				</div>
-				<div class="UTC-time" data-testid="currentUTCTime"></div>
+				<div data-testid="currentUTCTime">
+					<h1 class="UTC-time"></h1>
+				</div>
 			</div>
 			<div>
 				<h2 data-testid="myTrack">Frontend</h2>
 			</div>
 			<div>
-				<a href="#" data-testid="githubURL">GitHub URL</a>
+				<a
+					href="https://github.com/Raheem-Jamiu/Hng-Task-1"
+					data-testid="githubURL"
+					>GitHub URL</a
+				>
 			</div>
 		</div>
 	</body>
