@@ -5,7 +5,7 @@ function display_c() {
 
 function display_ct() {
 	var x = new Date();
-	var x1 = x.toISOString();
+	var x1 = x.toUTCString();
 	document.getElementById("ct").innerHTML = x1;
 }
 display_c();
