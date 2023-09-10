@@ -8,14 +8,14 @@ const days = [
 	"Saturday",
 ];
 
-const currentday = days[new Date().getDay()];
+const currentDay = days[new Date().getDay()];
 
-if (currentday === "Sunday") {
+if (currentDay === "Sunday") {
 	document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent =
-		currentday;
+		currentDay;
 } else {
 	document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent =
-		'Today is not Sunday. It"s' + currentday;
+		'Today is not Sunday. It"s' + currentDay;
 }
 
 const currentDate = new Date();
