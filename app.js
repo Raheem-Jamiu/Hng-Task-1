@@ -26,7 +26,8 @@ const customDate = new Date(
 	currentDate.getMonth(),
 	currentDate.getDate(),
 	timeParts[0],
-	timeParts[1]
+	timeParts[1],
+	timeParts[2]
 );
 
 const utcMilliseconds = customDate.getTime();
