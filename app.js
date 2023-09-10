@@ -1,11 +1,9 @@
-function display_c() {
-	var refresh = 1000; // Refresh rate in milli seconds
-	mytime = setTimeout("display_ct()", refresh);
+function updateUTCDateTime() {
+	const utcDate = new Date().toUTCString();
+	const utcTimeInMilliseconds = new Date().getTime();
+	document.getElementById("utcDateTime").textContent = ` ${utcDate} `;
 }
 
-function display_ct() {
-	var x = new Date();
-	var x1 = x.toUTCString();
-	document.getElementById("ct").innerHTML = x1;
-}
-display_c();
+setInterval(updateUTCDateTime, 1000);
+
+updateUTCDateTime();
