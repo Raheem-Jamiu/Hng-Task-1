@@ -1,35 +1,30 @@
-const days = [
-	"Sunday",
-	"Monday",
-	"Tuesday",
-	"Wednesday",
-	"Thursday",
-	"Friday",
-	"Saturday",
-];
-
-const currentDay = days[new Date().getDay()];
-
-if (currentDay === "Sunday") {
-	document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent =
-		currentDay;
-} else {
-	document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent =
-		'Today is not Sunday. It"s' + currentDay;
-}
-
-const currentDate = new Date();
-const timeString = "11:32:37";
-const timeParts = timeString.split(":");
-const customDate = new Date(
-	currentDate.getFullYear(),
-	currentDate.getMonth(),
-	currentDate.getDate(),
-	timeParts[0],
-	timeParts[1],
-	timeParts[2]
+const currentDayText = document.querySelector(
+	'[data-testid="currentDayOfTheWeek"]'
 );
+const currentUTCTime = document.querySelector('[data-testid="currentUTCTime"]');
+const date = new Date();
 
-const utcMilliseconds = customDate.getTime();
-document.querySelector('[data-testid="currentUTCTime"]').textContent =
-	utcMilliseconds;
+const generateCurrentDate = () => {
+	const daysOfTheWeek = [
+		"Sunday",
+		"Monday",
+		"Tuesday",
+		"Wednesday",
+		"Thursday",
+		"Friday",
+		"Saturday",
+	];
+	const dayIndex = date.getDay();
+	const currentDay = daysOfTheWeek[dayIndex];
+	currentDayText.innerText = currentDay;
+};
+
+const generateUTCTime = () => {
+	const date = new Date();
+	const utcTimeMilliseconds = date.getTime();
+	currentUTCTime.textContent = utcTimeMilliseconds;
+};
+
+generateCurrentDate();
+generateUTCTime();
+setInterval(generateUTCTime, 1000);
